@@ -3,366 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future-Ready Manufacturing Org Chart</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Future-Ready Manufacturing Org Chart | AI-Powered Department Assistants</title>
     <style>
-        @keyframes blob {
-            0% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-            100% { transform: translate(0px, 0px) scale(1); }
+        :root {
+            --primary: #2A5C99;
+            --secondary: #FF6B00;
+            --dark: #1A2B48;
+            --light: #F8F9FA;
+            --success: #28A745;
         }
-        .animate-blob {
-            animation: blob 7s infinite;
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
-        .animation-delay-2000 {
-            animation-delay: 2s;
+        
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
         }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-top: 3rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #e05d00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .benefit-item {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .benefit-item h3 {
+            color: var(--primary);
+        }
+        
+        .org-chart-container {
+            background-color: white;
+            padding: 3rem;
+            margin: 3rem 0;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .testimonial {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem;
+            margin: 3rem 0;
+            border-radius: 8px;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .checklist {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <div class="text-xl font-bold text-gray-900">ManufactureAI</div>
-                </div>
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="#" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Features</a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="relative py-20 bg-gradient-to-br from-blue-50 via-white to-gray-50 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#9C92AC_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto fade-in">
-                <div class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-6">
-                    🚀 The Future of Manufacturing is Here
-                </div>
-                <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                    Meet Your Future-Ready 
-                    <span class="text-blue-600">Manufacturing</span> 
-                    Org Chart
-                </h1>
-                <p class="text-xl text-gray-600 mb-8">
-                    Infused with AI Agents Designed for Every Department
-                </p>
-                <div class="space-y-6 mb-12">
-                    <div class="flex items-center space-x-3">
-                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
-                            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                        </div>
-                        <p>Transform your manufacturing operations with AI-powered automation</p>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
-                            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                        </div>
-                        <p>24/7 monitoring and optimization across all departments</p>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
-                            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                        </div>
-                        <p>Real-time insights and predictive analytics for better decision-making</p>
-                    </div>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                        See AI in Action
-                    </a>
-                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-base font-medium rounded-lg text-blue-600 bg-white hover:bg-blue-50 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                        Talk to a Specialist
-                    </a>
-                </div>
-                <div class="mt-8 flex items-center justify-center space-x-4">
-                    <div class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                        </svg>
-                        Trusted by 500+ Manufacturers
-                    </div>
-                    <div class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                        </svg>
-                        99.9% Uptime
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div class="absolute bottom-0 left-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-    </section>
-
-    <!-- Feature Section -->
-    <section class="relative py-20 bg-gradient-to-br from-blue-50 via-white to-gray-50 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#9C92AC_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <div class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-6">
-                    📊 Intelligent Organization
-                </div>
-                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                    Your New AI-Enhanced 
-                    <span class="text-blue-600">Org Structure</span>
-                </h2>
-                <p class="text-xl text-gray-600">
-                    Transform your traditional organizational chart into a dynamic, AI-powered network that drives efficiency and innovation.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-6 transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 fade-in">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Smart Department Integration</h3>
-                    <p class="text-gray-600">Seamlessly connect your existing teams with AI agents that enhance productivity and decision-making across all levels.</p>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-lg p-6 transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 fade-in">
-                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">24/7 AI Support System</h3>
-                    <p class="text-gray-600">Round-the-clock monitoring and assistance across all manufacturing operations, ensuring continuous optimization.</p>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-lg p-6 transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 fade-in">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Real-time Analytics Dashboard</h3>
-                    <p class="text-gray-600">Get instant insights and performance metrics for every department, enabling data-driven decision making.</p>
-                </div>
-            </div>
-        </div>
-        <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div class="absolute bottom-0 left-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 fade-in">
-                Why Business Leaders Like You Are Saying Yes to AI Assistants
-            </h2>
-            <div class="max-w-3xl mx-auto">
-                <ul class="space-y-4 fade-in">
-                    <li class="flex items-start">
-                        <span class="text-green-500 mr-3">✅</span>
-                        <span>Reclaim 10+ hours/week/team lost in mundane tasks</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-500 mr-3">✅</span>
-                        <span>Speed up decisions with real-time insights from each department</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-500 mr-3">✅</span>
-                        <span>Reduce errors caused by manual entries and hand-offs</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-500 mr-3">✅</span>
-                        <span>Boost employee morale by eliminating repetitive work</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-500 mr-3">✅</span>
-                        <span>Scale operations faster without always adding headcount</span>
-                    </li>
-                </ul>
-            </div>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>Meet Your Future-Ready Manufacturing Org Chart</h1>
+            <p>Infused with AI Agents Designed for Every Department</p>
+            <a href="#demo" class="cta-button">See It In Action</a>
         </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="relative py-20 bg-gradient-to-br from-blue-50 via-white to-gray-50 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#9C92AC_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <div class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-6">
-                    🏆 Industry Leader in AI Manufacturing
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300">
-                        <div class="text-4xl font-bold text-blue-600 mb-2">500+</div>
-                        <div class="text-gray-600">Manufacturers Trust Us</div>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300">
-                        <div class="text-4xl font-bold text-blue-600 mb-2">99.9%</div>
-                        <div class="text-gray-600">System Uptime</div>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300">
-                        <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-                        <div class="text-gray-600">AI Support</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-left fade-in">
-                    <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                        Transform Your 
-                        <span class="text-blue-600">Manufacturing</span> 
-                        Today
-                    </h2>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Join the AI revolution and give your team the power to achieve more.
-                    </p>
-                    <div class="space-y-6 mb-12">
-                        <div class="flex items-start space-x-3">
-                            <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
-                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <p>Get a personalized demo tailored to your manufacturing needs</p>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
-                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <p>Receive a custom implementation roadmap for your organization</p>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
-                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <p>Start your journey to AI-powered manufacturing excellence</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                            Start Free Trial
-                        </a>
-                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-base font-medium rounded-lg text-blue-600 bg-white hover:bg-blue-50 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                            Book a Demo
-                        </a>
-                    </div>
-                    <div class="mt-8 flex items-center space-x-4">
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            14-Day Free Trial
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            No Credit Card Required
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative fade-in">
-                    <div class="bg-white rounded-xl shadow-lg p-8">
-                        <div class="text-center">
-                            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4">Ready to Transform Your Manufacturing?</h3>
-                            <p class="text-gray-600 mb-6">Join industry leaders who are already experiencing the power of AI-driven manufacturing.</p>
-                            <div class="bg-blue-50 rounded-lg p-6">
-                                <div class="flex items-center mb-4">
-                                    <img src="https://www.thesunflowerlab.com/wp-content/uploads/2025/04/MacBook-contents-3-2048x1237.jpg.webp" alt="Success Story" class="w-12 h-12 rounded-full object-cover mr-4">
-                                    <div>
-                                        <div class="font-semibold">John Smith</div>
-                                        <div class="text-sm text-gray-600">Manufacturing Director</div>
-                                    </div>
-                                </div>
-                                <p class="text-gray-700 italic">"Implementing this AI solution has increased our efficiency by 40% and reduced operational costs significantly."</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    
+    <section class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p>Running a manufacturing business is no easy feat. You've got supply chain delays to track, production targets to hit, sales goals to crush, and a mountain of reports, emails, and repeat tasks that eat into your team's time every single day.</p>
+            
+            <p>That's why we've designed an <strong>AI-powered Org Chart</strong> built specifically for manufacturing companies like yours — where every department gets its own smart AI agents to handle the busy work and free up your people for what really matters.</p>
         </div>
-        <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div class="absolute bottom-0 left-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        
+        <h2 style="text-align: center;">Your New AI-Enhanced Org Structure</h2>
+        
+        <div class="org-chart-container">
+            <!-- Placeholder for org chart image -->
+            <img src="https://via.placeholder.com/800x500?text=AI-Powered+Manufacturing+Org+Chart" alt="AI-Enhanced Manufacturing Org Chart" style="max-width: 100%; border-radius: 8px;">
+            <p style="margin-top: 1rem;"><em>Each department powered by specialized AI assistants</em></p>
+        </div>
+        
+        <div class="testimonial">
+            <h2 style="color: white; text-align: center;">Why Business Leaders Like You Are Saying Yes to AI Assistants</h2>
+            <ul class="checklist">
+                <li><strong>Reclaim 10+ hours/week/team</strong> lost in mundane tasks</li>
+                <li><strong>Speed up decisions</strong> with real-time insights from each department</li>
+                <li><strong>Reduce errors</strong> caused by manual entries and hand-offs</li>
+                <li><strong>Boost employee morale</strong> by eliminating repetitive work</li>
+                <li><strong>Scale operations faster</strong> without always adding headcount</li>
+            </ul>
+        </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">ManufactureAI</h3>
-                    <p class="text-gray-400">Transforming manufacturing with AI-powered solutions.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>Email: info@manufactureai.com</li>
-                        <li>Phone: (555) 123-4567</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-                <p>&copy; 2024 ManufactureAI. All rights reserved.</p>
-            </div>
+    
+    <section id="demo" class="container" style="text-align: center; margin-bottom: 4rem;">
+        <h2>Ready to See It in Action?</h2>
+        <p>Let us show you how your team can start saving time this week by plugging in our AI assistants.</p>
+        <p>Or talk to one of our AI automation specialists to see how it fits your current structure.</p>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://www.thesunflowerlab.com/build-ai-agent/" class="cta-button">View Demo</a>
+            <a href="https://www.thesunflowerlab.com/contact/" class="cta-button" style="background-color: var(--primary);">Talk to Specialist</a>
+        </div>
+        
+        <p style="margin-top: 2rem; font-style: italic; max-width: 800px; margin-left: auto; margin-right: auto;">
+            This isn't about replacing people — it's about giving your people a powerful co-pilot.<br>
+            Let your teams focus on strategy, innovation, and growth — while our AI agents handle the rest.
+        </p>
+        
+        <p style="font-size: 1.2rem; font-weight: bold; color: var(--secondary);">Let's build the factory of the future. Today. 🚀</p>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 AI-Powered Manufacturing Solutions. Partnering with <a href="https://www.thesunflowerlab.com" style="color: white;">Sunflower Lab</a> for AI innovation.</p>
         </div>
     </footer>
-
-    <script>
-        // Simple fade-in animation on scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
-            document.querySelectorAll('.fade-in').forEach((element) => {
-                observer.observe(element);
-            });
-        });
-    </script>
 </body>
-</html> 
+</html>
